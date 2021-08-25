@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+  python:
+    image: kmiya/python:1.0
+    build: ./python
+    container_name: 'scrapy'
+    stdin_open: true
+    tty: true
+    working_dir: '/tmp/work'
+    volumes:
+      - ../:/tmp/work
